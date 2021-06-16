@@ -2,17 +2,18 @@ from django.contrib import admin
 from .models import Book, Author
 
 
-class Author(admin.ModelAdmin):
+class Authors(admin.ModelAdmin):
     list_display = ('id','name', 'country')
     list_display_links = ('id', 'name')
     search_fields = ('name','country')
     list_per_page = 20
 
-# admin.site.register(Author, Authors)
+admin.site.register(Author, Authors)
 
-class Book(admin.ModelAdmin):
-    list_display = ('id', 'codigo_curso', 'descricao')
-    list_display_links = ('id', 'codigo_curso')
-    search_fields = ('codigo_curso',)
+class Books(admin.ModelAdmin):
+    list_display = ('id', 'name','genre', 'year')
+    list_display_links = ('id', 'name')
+    search_fields = ('name','genre')
+    list_per_page = 20
 
-# admin.site.register(Book, Books)
+admin.site.register(Book, Books)
