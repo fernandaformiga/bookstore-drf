@@ -7,6 +7,8 @@ authors = ["fernandaformiga <ferformigas@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 Django = "^3.2.4"
+djangorestframework = "^3.12.4"
+Markdown = "^3.3.4"
 
 [tool.poetry.dev-dependencies]
 

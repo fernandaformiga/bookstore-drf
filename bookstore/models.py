@@ -13,10 +13,11 @@ class Book(models.Model):
         ('U', 'unavailable'),
         ('F', 'few units left')
     )
+    name = models.CharField(max_length=50)
     quantity = models.IntegerField()
     year = models.IntegerField()
     genre = models.CharField(max_length=50)
     author = models.ManyToManyField(Author)
 
     def __str__(self):
-        return self.descricao
+        return self.name
